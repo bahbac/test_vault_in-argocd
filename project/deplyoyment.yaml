@@ -22,8 +22,6 @@ spec:
           env:
           - name: ANOTHER_ENV_VAR
             value: <envvar>
-          - name: YET_ANOTHER_ENV_VAR
-            value: <anotherkey>
           - name: MY_ENV_VAR
             valueFrom:
               secretKeyRef:
