@@ -1,6 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  annotations:
+    avp.kubernetes.io/path: "kv-v2/data/argocd"
   name: nginx-deployment
 spec:
   selector:
