@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+spec:
+  selector:
+    matchLabels:
+      app: nginx
+replicas: 1
+template:
+  metadata:
+    labels:
+      app: nginx
+  spec:
+    containers:
+    - name: nginx
+      image: nginx:latest
+      ports:
+      - containerPort: 80
+      env:
+      - name: ANOTHER_ENV_VAR
+      - value: <envvar>
+      - name: MY_ENV_VAR
+        valueFrom:
+          secretKeyRef:
+            name: mysecret
+            key: TOKEN
