@@ -2,8 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx-deployment
-  annotations:
-    avp.kubernetes.io/path: "kv-v2/data/argocd"
 spec:
   selector:
     matchLabels:
@@ -21,7 +19,7 @@ spec:
           - containerPort: 80
           env:
           - name: ANOTHER_ENV_VAR
-            value: <envvar>
+            value: <path:kv-v2/data/argocd#envvar>
           - name: MY_ENV_VAR
             valueFrom:
               secretKeyRef:
