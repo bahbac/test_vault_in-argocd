@@ -4,7 +4,6 @@ metadata:
   name: nginx-deployment
   annotations:
     avp.kubernetes.io/path: "kv-v2/data/argocd"
-    avp.kubernetes.io/path: "kv-v2/data/argocd2"
 spec:
   selector:
     matchLabels:
