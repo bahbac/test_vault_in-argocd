@@ -19,7 +19,7 @@ spec:
           - containerPort: 80
           env:
           - name: ANOTHER_ENV_VAR
-            value: <path:kv-v2/data/argocd>:envvar
+            value: <path:kv-v2/data/argocd#envvar>
           - name: MY_ENV_VAR
             valueFrom:
               secretKeyRef:
