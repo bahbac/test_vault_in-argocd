@@ -21,7 +21,7 @@ spec:
       - containerPort: 80
       env:
       - name: ANOTHER_ENV_VAR
-      - value: <envvar>
+        value: <envvar>
       - name: MY_ENV_VAR
         valueFrom:
           secretKeyRef:
